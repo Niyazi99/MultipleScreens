@@ -26,9 +26,13 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         nightMode.setOnClickListener((v)->{
-            if(((CheckBox)v).isChecked() )
-               mode="night";
-            else mode="light";
+            if(((CheckBox)v).isChecked() ) {
+                mode = "night";
+              mainLayout.setBackgroundColor(Color.parseColor("#ff000000"));
+            }
+            else mode="light";{
+                mainLayout.setBackgroundColor(Color.parseColor("#ffffffff"));
+            }
 
         });
             back.setOnClickListener((v)->{
